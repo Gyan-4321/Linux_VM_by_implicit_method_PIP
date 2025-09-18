@@ -22,8 +22,8 @@ resource "azurerm_public_ip" "test-pip" {
   name                = "test-pip1"
   resource_group_name = azurerm_resource_group.test-rg.name
   location            = azurerm_resource_group.test-rg.location
-  allocation_method   = "Dynamic" # or "Static"
-  sku                 = "Basic"
+  allocation_method   = "Static" # or "Dynamic"
+  sku                 = "Standard"
 }
 
 resource "azurerm_network_security_group" "nsg-test1" {
